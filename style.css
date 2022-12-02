@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+.logo{
+    height: 50px;
+    width: 100px;
+    padding: 0 0px; /* jaiga ta extened kore bariye dai*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DynaPuff', cursive;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+body{
+    width: 100%;
+}
+
+
+#header{
+    display: flex;  /* ak line e anar jonne  */
+    align-items: center;
+    justify-content: space-between; /* header er content er majhe gap korar jonne  */
+    padding: 20px 70px; /*top bottom left right*/
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);/* HEADER niche shadow hoi(x y radius)*/
+    z-index: 999;/* uporer navigation & header stick thakar jonne */
+   position: sticky; /* uporer navigation & header stick thakar jonne */
+   top: 0;
+   left: 0;
+    
+}
+
+#navigationbar{
+    display: flex; /* ak line e anar jonne  */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#navigationbar li{ /* list kivbe thkbe seta */
+    list-style: none;
+    padding: 0px 20px;
+    position: relative; /*list er gula niche underline thkbe aitar kaj*/
+}
+
+#navigationbar li a{/* underline sorano & baki sob kaj*/
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+    transition: 0.6s ease/*cursor neyar pore eto sec hover color thkbe*/ 
+
+}
+
+#navigationbar li a:hover,
+#navigationbar li a.underline{ /*jokhon jai home or page e thkbo seita hovercolor show korbe*/
+    color:#e63946 ;
+}
+
+#navigationbar li a.underline::after,
+#navigationbar li a:hover::after{/*cursor nile sei page e underline hobe*/ 
+    content: "";
+    width: 30%;/*likhar koto jaiga jure jabe underline*/
+    height: 3px;
+    background-color: #e63946 ;
+    position: absolute;
+    bottom: -4px; /* name er upor thke niche kotota nambe*/
+    left: 20px;
+}
+
+
+#hero{/*picture size moton bosano*/
+    background-image: url("img/h.jpg");
+    height: 102vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding:  0 80px; /*likha gula majh khane bosanor jonne*/
+    display: flex; /* ak line e anar jonne  */
+    flex-direction: column;/*ak colllum e anar jonne*/
+    align-items: flex-start; /* 1st surete jmn text cilo tmn hobe like button size samehobe*/
+    justify-content: center;/* purata sob kisu center e rekhe dibe*/
+}
+
+#hero h4{
+    padding-bottom: 15px ;
+}
+
+#hero h1{
+    color: #e76f51;
+}
+#hero p{
+     padding-bottom: 15px;
+}
+#hero button{
+    background-image: url("img/button.png");
+    background-color: transparent; /*sob kicu clear kore dai button er*/
+    color: #feeafa;
+    border: 0; /*button er pashe kono border thkbe na */
+    padding:  14px 80px 14px 65px; /* button er moddhe image ta rakhar jonne*/
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+
+    
+}
+
+/* product feature side*/
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .feature1{
+    width: 180px;
+    text-align: center;
+    padding: 15px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 2px solid #8d99ae;
+    border-radius: 6px;/* box er car dike baka hobe*/
+    margin: 12px 0; /*top-bottom & left - right*/
+}
+
+#feature .feature1:hover{
+     box-shadow: 10px 10px 64px rgba(70,62,221,0.1);
+     color: red;
+}
+#feature .feature1 img{
+    margin-bottom: 9px;
+    width: 100%;
+}
+#feature .feature1 h5{
+    padding:  9px 8px 6px 8px; 
+    line-height: 1;
+    border-radius: 5px;
+    display: inline-block;/*likhar soman  box ta thke,, likhar theke boro r kcu thkbe na*/
+    background-color:  #caf0f8;
+    
+}
+
+#feature .feature1:nth-child(2) h5{/*parent child(<div class="feature1"><img src="img/features/f1.png" alt="f1">
+<h5>Free Shipping</h5> </div>) er 2nd part tai */
+    background-color: #2a9d8f;
+}
+
+#feature .feature1:nth-child(3) h5{
+     background-color: #ffafcc;
+}
+
+#feature .feature1:nth-child(4) h5{
+     background-color: #8338ec;
+}
+#feature .feature1:nth-child(5) h5{
+     background-color: #b5838d;
+}
+#feature .feature1:nth-child(6) h5{
+     background-color: #3d405b;
+}
+
+/* product feature */
+#featureproduct{
+    text-align: center;
+    
+}
+
+#featureproduct .firstproduct{/*1st produc er box er all kaj*/
+    width: 23%;
+    padding: 10px 12px;
+    border: 1px solid #006d77;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    margin: 15px 0;
+    transition: 0.02s ease; 
+    position: relative;
+}
+
+#featureproduct .firstproduct:hover{
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.06); 
+}
+
+#featureproduct .firstproduct img{/* uporer code e ja box banano hoise border oitar moton kora*/
+    width: 100%; /* width ta oitar moton (box er moddha) kora*/
+    border-radius: 20px;
+}
+
+#featureproduct .firstproduct .description1{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#featureproduct .firstproduct .description1 span{/*kono tag ka design korar jonne only sei name dilai hoi(h1)*/
+    
+    color: yellow;
+    font-size: 12px;
+}
+#featureproduct .firstproduct .description1 h5{
+    padding-top: 6px;
+    color: black;
+    font-size: 14px;
+}
+
+#featureproduct .firstproduct .description1 i{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+#featureproduct .firstproduct .description1 h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: red;
+}
+
+#featureproduct .firstproduct .cart{
+    color: pink;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+#featureproduct .firstproduct .cart:hover{
+    box-shadow: 10px 10px 64px rgba(70,62,221,0.1);
+     color: red;
+}
+#featureproduct .feature{/* product gula ak sathe anar jonne & wrap korar jonne*/
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+    flex-wrap: wrap;/* size onujai line break kore onno line ejawar jonne*/
+}
+
+#banner{
+    background-image: url("img/banner/b2.jpg");
+   align-items: center;
+    text-align: center;
+    margin:  40px 0px;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;/* pura img ta pura cover kore */
+    background-position: center;
+    justify-content: center;
+    display: flex; /* majh khane anar jonne content ta */
+    flex-direction: column;/* colmn onujai likha or content bosbe*/
+    
+}
+
+#banner h4{
+    color: greenyellow;
+    font-size: 20px;
+}
+
+#banner h2{
+    color: gold;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+#banner h2 span{
+    color: red;
+}
+
+#banner button.btn1{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: wheat;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+#banner button.btn1:hover{
+    background: green;
+    color: white;
+}
+#banner-2{
+    display: flex;
+}
+#banner-2 .banner-box-1{
+    background-image: url("img/banner/b17.jpg");
+align-items: flex-start; /* likha gula 1st theke suru kore*/
+    margin:  30px 50px;
+    width: 580px;
+    height: 50vh;
+    background-size: cover;/* pura img ta pura cover kore */
+    background-position: center;
+    justify-content: center;
+    display: flex; /* majh khane anar jonne content ta */
+    padding: 30px; /*content For everywhere*/
+    flex-direction: column;/* colmn onujai likha or content bosbe*/
+}
+#banner-2 .banner-box-2{
+    background-image: url("img/banner/b10.jpg"); 
+}
+
+#banner-2 .banner-box-1 h4{
+    color: #8338ec;
+    font-size: 22px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+#banner-2 .banner-box-1 h2{
+    color: #e76f51;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+#banner-2 .banner-box-1 span{
+    color: #2a9d8f;
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+.btn2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    padding: 12px 15px;
+    transition: 0.3s;
+}
+
+#banner-2 button.btn2{
+     text-align: center;
+     font-size: 20px;
+     font-weight: 600;
+     border: 2px solid white;
+     background-color: transparent;
+     color: white;
+     cursor: pointer;
+     outline: none;
+     border-radius: 5px;
+     padding: 12px 15px;
+     transition: 0.3s;
+}
+
+#banner-2 .banner-box-1:hover button{/*jehetu box er upore hover tai button change hhobe*/
+background-color: #2a9d8f;
+border: 2px solid #2a9d8f;
+}
+
+/*Text banner*/
+
+#banner-3{
+    display: flex;
+}
+#banner-3 .banner-box-1{
+    background-image: url("img/banner/b7.jpg");
+    align-items: flex-start; /* likha gula 1st theke suru kore*/
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 40px;
+        width: 30%;
+        height: 34vh;
+        background-size: cover;/* pura img ta pura cover kore */
+        background-position: center;
+        justify-content: center;
+        display: flex; /* majh khane anar jonne content ta */
+        padding: 30px 30px; /*content For everywhere*/
+        flex-direction: column;/* colmn onujai likha or content bosbe*/
+}
+
+#banner-3 .banner-box-2{
+    background-image: url("img/banner/b4.jpg");
+}
+
+#banner-3 .banner-box-3{
+    background-image: url("img/banner/b18.jpg");
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 50px;
+}
+
+footer .colum1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 25px;
+    margin-bottom: 25px;
+}
+
+
+
+footer .logo{
+    margin-bottom: 30px;
+}
+footer .follow h4{
+    margin-top: 10px;
+}
+footer .follow i{
+    cursor: pointer;
+    padding-right: 5px;
+    color: #e63946;
+}
+
+footer h4{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+ footer p{
+    font-size: 14px;
+    margin: 0 0 8px 0;
+ }
+
+ footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+ }
+
+ footer .install .row img{
+    border: 2px solid blueviolet;
+    border-radius: 7px;
+    margin-bottom: 20px;
+ }
+ footer .install p{
+    margin-bottom: 20px;
+ }
+
+ footer .follow i:hover,/* icon e hobe tai (i) tag use hobe and  hover add hobe icon e & anchor tag e sob gulai ai footer e*/
+ footer a:hover{
+    color: #2a9d8f;
+
+ }
+
+ footer .copyright{
+    text-align: center;
+    width: 100%;/* jehetu aita pura 4 ta section e vag tai aitar width na barale majh khane jabe na*/
+}
+
+/*shop page*/
+
+#page-header{
+    background-image: url("img/banner/b1.jpg");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2,
+#page-header p{
+    color: #b5838d;
+}
+
+/*paging*/
+
+#paging{
+    text-align: center;
+}
+
+#paging a{
+    text-decoration: none;
+    background-color: #e63946;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color:#1a1a1a;
+    font-weight: 500;
+
+}
+
+#paging a i{
+    font-size: 15px;
+}
+
+/*single product image & description*/
+#productdetails{
+    display: flex;
+    margin-top: 25px;
+}
+
+#productdetails .single-product-image{
+    width: 40%;
+    margin-right: 50px; /* right side e 50% jaiga thake r ki*/
+}
+.small-image-product{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.small-image1{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#productdetails .single-product-details{
+    width: 60%;
+    padding-top: 35px;
+}
+
+#productdetails .single-product-details h4{
+    padding: 40px 0 18px 0; /* 4 ta thkle top-right-bottom-left vabe hoi*/
+}
+#productdetails .single-product-details h2{
+   font-size: 27px;
+   margin-bottom: 13px;
+}
+
+#productdetails .single-product-details select{
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+}
+#productdetails .single-product-details select:focus{ /* select size e click korar pore border er baire akta line dekha jai seta remove er jonne*/
+    outline: none;
+}
+#productdetails .single-product-details input{
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+}
+
+#productdetails .single-product-details input:focus{
+    outline: none;
+}
+#productdetails .single-product-details button {
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+border: 2px solid white;
+background-color: blueviolet;
+color: white;
+cursor: pointer;
+outline: none;
+border-radius: 7px;
+padding: 12px 15px;
+transition: 0.3s;
+}
+
+#productdetails .single-product-details span{
+    line-height: 28px;
+}
+
+/*Blog page html*/
+#page-header.blog-header{ /* id(#) er pore kono space hobe na */
+    background-image: url("img/banner/b19.jpg");
+}
+
+#blog{
+    padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blog-image{
+    width: 50%;
+    margin-right:40px ;
+
+}
+
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+#blog .blog-details{
+    width: 50%;
+}
+#blog .blog-details h4,p{
+    padding-bottom: 20px;
+}
+#blog .blog-details a{
+    text-decoration: none;
+    font-size: 11px;
+    color: #e63946;
+    font-weight: 700;
+    position: relative;
+    padding-top: 20px;
+    transition: 0.5s;
+}
+
+#blog .blog-details a::after{/* continue reading er underline ta pore tai after diya kora hoise*/
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #e63946;
+    position: absolute;
+    padding-top: 1px;
+    top: 28px;
+    right: -60px;
+}
+#blog .blog-details a:hover{
+    color: #8338ec;
+}
+#blog .blog-details a:hover::after{/*after er pore jeta thke oita hover hoya background*/
+    background-color: #8338ec;
+}
+#blog .blog-box h1{
+    position: absolute;
+   top: -50px; /*mane ja postion e ace oi position theke (-) korle upore jabe & (+) korle niche asbe top*/
+    left: 0px;/*mane (+) mane dhan dike jabe*/
+    font-size: 70px;
+    font-weight: 700;
+    color: #e63946;
+z-index: -9;/*kono element er pichone kono kisu deyar j0nne z-index er value (-) hobe*/
+}
+
+/*about page*/
+#page-header.about-header
+{
+    background-image: url("img/about/banner.png");
+
+}
+#about {
+    display: flex;
+    align-items: center;
+
+}
+#about img{
+    width: 50%;
+    height: auto;
+}
+
+#about .about-us{
+    padding-left: 40px;
+}
+
+#about-app{
+    text-align: center;
+}
+
+#about-app .video{
+    width: 70%;
+    height:100%;
+    margin: 30px auto 0 auto;
+   
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+/*contact page*/
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact .contact-details{
+    width: 40%;
+    
+}
+#contact .contact-details span{
+    font-size: 12px;
+}
+
+#contact .contact-details h2,
+#form-contact form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact .contact-details h3{
+    font-size: 26px;
+   padding-bottom: 15px;
+}
+
+#contact .contact-details li{/* list er decoration er jonne*/
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact .contact-details li i{/* icon gula thik korar jonne*/
+    font-size: 14px;
+    padding-right: 22px;
+
+}
+
+#contact .contact-details li p{
+    font-size: 14px;
+}
+
+#contact .map{
+    width: 55%;
+    height: 420px;
+}
+
+#contact .map iframe{ /* iframe tag er majhe map ta size kora*/
+    width: 100%;
+    height: 100%;
+}
+
+/* form details*/
+#form-contact{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 2px solid rebeccapurple;
+}
+#form-contact form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;/* ak ta colm e niya ase*/
+    align-items: flex-start;/*item/ content gula sundr kore decoration kore suru thke*/
+
+}
+#form-contact form span{
+  font-size: 12px;  
+}
+#form-contact form input,
+#form-contact form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid rosybrown;
+}
+#form-contact form button{
+    background-color: #e63946;
+    color: #caf0f8;
+}
+
+#form-contact .founder div{/*jehetu div tag er under e tai div ta declare korte hoibe*/
+    padding-bottom: 25px;
+    display: flex;/*ak ta row te rakhar jonne*/
+    align-items: flex-start;/* duru theke start hoyar jonne*/
+} 
+#form-contact .founder div img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+#form-contact .founder div p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+
+}
+#form-contact .founder div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+
+
+
+
+
+
